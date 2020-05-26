@@ -5,12 +5,13 @@ Here you'll find really clear examples, so you can easily use Hashicorp Terrafor
 
  1. vsphere-connection
  2. vsphere-create-dc
- 3. vsphere-create-resource-pool
- 4. vsphere-add-host-to-cluster
- 5. vsphere-add-hosts-to-cluster
- 6. vsphere-create-vds
- 7. vsphere-deploy-vm
- 8. vsphere-deploy-vm-from-template
+ 3. vsphere-create-cluster
+ 4. vsphere-create-resource-pool
+ 5. vsphere-add-host-to-cluster
+ 6. vsphere-add-hosts-to-cluster
+ 7. vsphere-create-vds
+ 8. vsphere-deploy-vm
+ 9. vsphere-deploy-vm-from-template
 
 ## Sources and useful links:
 
