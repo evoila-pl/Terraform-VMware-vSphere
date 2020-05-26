@@ -30,18 +30,6 @@ variable "esx_pass" {
   description = "Password of root user."
 }
 
-variable "hosts" {
-  default = [
-      "esx",
-  ]
-}
-
-variable "thumbprints" {
-  default = [
-      "4F:6D:22:38:97:CA:25:04:D8:16:D4:87:CF:D8:80:B8:94:53:CC:FF",
-  ]
-}
-
 variable "rp_name" {
   type = string
   description = "Name of your RP"
