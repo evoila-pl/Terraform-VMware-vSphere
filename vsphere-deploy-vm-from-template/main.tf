@@ -10,17 +10,17 @@ data "vsphere_datacenter" "dc" {
 }
 
 data "vsphere_datastore" "datastore" {
-  name = "DS"
+  name = "esxi1-7-ds1"
   datacenter_id = data.vsphere_datacenter.dc.id
 }
 
 data "vsphere_resource_pool" "rp" {
-  name          = var.rp_name
+  name = var.rp_name
   datacenter_id = data.vsphere_datacenter.dc.id
 }
 
 data "vsphere_distributed_virtual_switch" "vds" {
-  name          = "vds-test"
+  name = "vds"
   datacenter_id = data.vsphere_datacenter.dc.id
 }
 
@@ -31,12 +31,12 @@ data "vsphere_network" "network" {
 }
 
 data "vsphere_virtual_machine" "template" {
-  name = "lamp"
+  name = "ghost"
   datacenter_id = data.vsphere_datacenter.dc.id
 }
 
 resource "vsphere_virtual_machine" "vm" {
-  name = "LAMP"
+  name = "ghost-test"
   resource_pool_id = data.vsphere_resource_pool.rp.id
   datastore_id = data.vsphere_datastore.datastore.id
 
