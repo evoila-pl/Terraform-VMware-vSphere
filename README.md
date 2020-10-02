@@ -12,6 +12,8 @@ Here you'll find really clear examples, so you can easily use Hashicorp Terrafor
  7. vsphere-create-vds
  8. vsphere-deploy-vm
  9. vsphere-deploy-vm-from-template
+ 10. vsphere-deploy-vm-from-ovf
+ 11. vsphere-add-content-library
 
 ## Sources and useful links:
 
