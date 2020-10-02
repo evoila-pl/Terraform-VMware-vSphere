@@ -1,5 +1,3 @@
-# Provider
-
 variable "vsphere_user" {
   type = string
   description = "Username of admin/root account."
@@ -28,4 +26,18 @@ variable "cluster_name" {
 variable "esx_pass" {
   type = string
   description = "Password of root user."
+}
+
+variable "hosts" {
+  default = [
+      "esxi1-7.int.inleo.pl",
+      "esxi2-7.int.inleo.pl",
+  ]
+}
+
+variable "thumbprints" {
+  default = [
+      "08:71:53:E1:38:BE:9B:D5:28:00:03:FD:24:84:8F:73:81:E9:E1:17",
+      "08:71:53:E1:38:BE:9B:D5:28:00:03:FD:24:84:8F:73:81:E9:E1:17",
+  ]
 }
