@@ -20,9 +20,10 @@ resource "vsphere_compute_cluster" "cluster" {
 }
 
 resource "vsphere_host" "hosts" {
-  hostname = "esx"
+  hostname = "esxi1-7.int.inleo.pl"
   username = "root"
   password = var.esx_pass
   cluster = vsphere_compute_cluster.cluster.id
-  thumbprint = "4F:6D:22:38:97:CA:25:04:D8:16:D4:87:CF:D8:80:B8:94:53:CC:FF"
+  license = "XXXXX-XXXXX-XXXXX-XXXXX-XXXXX"
+  thumbprint = "08:71:53:E1:38:BE:9B:D5:28:00:03:FD:24:84:8F:73:81:E9:E1:17"
 }
