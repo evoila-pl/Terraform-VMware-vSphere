@@ -1,5 +1,3 @@
-# Provider
-
 variable "vsphere_user" {
   type = string
   description = "Username of admin/root account."
