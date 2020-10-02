@@ -19,6 +19,17 @@ resource "vsphere_compute_cluster" "cluster" {
   ha_enabled = false
 }
 
+resource "vsphere_host" "hosts" {
+  count = length(var.hosts)
+
+  hostname = var.hosts[count.index]
+  username = "root"
+  password = var.esx_pass
+  license = "XXXXX-XXXXX-XXXXX-XXXXX-XXXXX"
+  cluster = vsphere_compute_cluster.cluster.id
+  thumbprint = var.thumbprints[count.index]
+}
+
 resource "vsphere_resource_pool" "rp" {
   name = var.rp_name
   parent_resource_pool_id = vsphere_compute_cluster.cluster.resource_pool_id
