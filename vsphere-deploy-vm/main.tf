@@ -10,17 +10,17 @@ data "vsphere_datacenter" "dc" {
 }
 
 data "vsphere_datastore" "datastore" {
-  name = "DS"
+  name = "esxi1-7-ds1"
   datacenter_id = data.vsphere_datacenter.dc.id
 }
 
 data "vsphere_resource_pool" "rp" {
-  name          = var.rp_name
+  name = var.rp_name
   datacenter_id = data.vsphere_datacenter.dc.id
 }
 
 data "vsphere_distributed_virtual_switch" "vds" {
-  name          = "vds-test"
+  name = "vds"
   datacenter_id = data.vsphere_datacenter.dc.id
 }
 
@@ -36,7 +36,7 @@ resource "vsphere_virtual_machine" "vm" {
   datastore_id = data.vsphere_datastore.datastore.id
 
   num_cpus = 1
-  memory   = 1024
+  memory = 1024
   guest_id = "other3xLinux64Guest"
 
   wait_for_guest_net_timeout = 0
